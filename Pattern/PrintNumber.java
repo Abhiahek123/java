@@ -1,5 +1,5 @@
 
-
+package Pattern;
 public class PrintNumber {
     public static void main(String[] args) {
         int n = 5;
