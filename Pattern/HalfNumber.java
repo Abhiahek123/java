@@ -1,4 +1,5 @@
-
+package Pattern;
+import java.util.*;
 
 public class HalfNumber {
     public static void main(String[] args) {
