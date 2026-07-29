@@ -1,3 +1,4 @@
+
 package Function;
 
 import java.util.*;
@@ -17,7 +18,10 @@ class factorial {
         int  n = sc.nextInt();
         System.out.println(factorials(n));
       
-
+       
     }
+    
+   
+
 }
 
