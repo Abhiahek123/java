@@ -18,6 +18,7 @@ public class Sum {
         // System.out.println(printadd);
 
         System.out.println(add(a, b));
+        sc.close();
 
        
         

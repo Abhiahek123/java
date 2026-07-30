@@ -14,6 +14,7 @@ public class multiply {
         int a = sc.nextInt();
         int b = sc.nextInt();
         System.out.println(product(a, b));
+        sc.close();
 
         
     }
