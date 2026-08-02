@@ -10,6 +10,7 @@ public class fibonacci {
             return 1;
 
         }
+        // a(n-2)+b(n-1) = c
 
         return fib(n-1)+ fib(n-2);
 
