@@ -1,4 +1,4 @@
-public class printNum {
+public class printeven {
 
     public static void printNumber(int n) {
         if(n>=100) {
