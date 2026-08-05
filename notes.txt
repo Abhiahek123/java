@@ -1,0 +1,174 @@
+String
+==========
+1. String ek class hai jo text store karti hai.
+2. Immutable
+3. Slow modification
+4. Har change pe nayi object
+
+
+length() → String ki length (total characters) batata hai.
+charAt(index) → Kisi index ka character return karta hai.
+substring() → String ka kuch hissa (part) nikalta hai.
+equals() → Do strings ki values compare karta hai.
+compareTo() → Do strings ko alphabetically compare karta hai.
+concat() → Do strings ko jodta (concatenate) hai.
+toUpperCase() → Sabhi characters ko uppercase me convert karta hai.
+toLowerCase() → Sabhi characters ko lowercase me convert karta hai.
+trim() → String ke start aur end ke extra spaces hata deta hai.
+
+
+
+
+StringBuilder
+=================================================
+
+1. StringBuilder ek class hai jo text ko modify karne ke liye use hoti hai.
+2. Mutable hoti hai.
+3. Speed fast hoti hai.
+4. Same object modify hoti hai
+
+
+
+append() → Last me text add karta hai.
+insert() → Kisi index par text insert karta hai.
+delete() → Characters delete karta hai.
+replace() → Characters replace karta hai.
+reverse() → String ko reverse karta hai.
+setCharAt() → Kisi index ka character change karta hai.
+charAt() → Kisi index ka character return karta hai.
+length() → Total characters ki length batata hai.
+
+
+
+Bubble Sort Kya Hai?
+==============================
+
+Bubble Sort ek simple sorting algorithm hai jo adjacent (paas-paas) elements ko compare karta hai aur agar left element bada ho to unhe swap kar deta hai. Ye process tab tak chalta hai jab tak array sort na ho jaye.
+
+
+
+Working->
+====
+
+Array = [5, 3, 8, 4, 2]
+
+Pass 1
+=========
+
+5 3 → Swap → 3 5 8 4 2
+5 8 → No Swap
+8 4 → Swap → 3 5 4 8 2
+8 2 → Swap → 3 5 4 2 8
+
+Time Complexity ->
+=======
+
+Worst Case: O(n²)
+
+Space Complexity->
+=====
+O(1)
+
+for (int j = 0; j < arr.length - i - 1; j++)
+=======
+Conclusion=>
+====
+- i nahi likhoge → Output sahi aayega, lekin extra comparisons honge aur algorithm slow hoga.
+- i likhoge → Sirf unsorted part compare hoga, isliye Bubble Sort zyada efficient ban jata hai.
+
+
+Exam me 1 line ka answer:
+==========
+
+- i isliye use karte hain kyunki har pass ke baad sabse bada element apni correct position par pahunch jata hai. Isliye usse dobara compare karne ki zarurat nahi hoti, jisse unnecessary comparisons bach jate hain aur Bubble Sort fast ho jata hai.
+
+
+Selection Sort
+===============
+
+Definition->
+
+Selection Sort ek sorting algorithm hai jo har pass me unsorted array ka sabse chhota (minimum) element dhoondta hai aur usse current position se swap kar deta hai.
+
+
+
+Working
+
+Example:
+
+5 3 8 4 2
+Pass 1
+
+Minimum = 2
+
+Swap 5 aur 2
+
+2 3 8 4 5
+Pass 2
+
+Minimum = 3
+
+Already sahi position par hai.
+
+2 3 8 4 5
+Pass 3
+
+Minimum = 4
+
+Swap 8 aur 4
+
+2 3 4 8 5
+Pass 4
+
+Minimum = 5
+
+Swap 8 aur 5
+
+2 3 4 5 8
+
+Sorted Array ✅
+
+
+Time Complexity ->
+=======
+
+Worst Case: O(n²)
+
+
+
+
+
+
+Recursion
+===============
+
+Recursion ek aisi technique hai jisme ek function/method khud ko hi call karta hai, jab tak koi Base Case na aa jaye.
+
+
+Recursion ka Structure
+=================================
+
+returnType functionName(parameters) {
+
+    // Base Case
+    if(condition) {
+        return value;
+    }
+
+    // Recursive Call
+    return functionName(smallerProblem);
+}
+
+
+Base Case Kya Hota Hai?
+==============================
+
+Base Case recursion ko rokta hai.
+
+Agar Base Case nahi hoga to function infinite time call hota rahega aur StackOverflowError aa jayega.
+
+Example:=>
+
+if(n == 0) {
+    return;
+}
