@@ -172,3 +172,78 @@ Example:=>
 if(n == 0) {
     return;
 }
+
+
+
+
+===========================================
+
+HashSet (Java) – Short Notes
+===========
+HashSet Kya Hai?
+--------------
+Java Collection Framework ka part hai.
+Unique elements store karta hai.
+Duplicate values allow ❌
+Insertion order maintain nahi karta ❌
+Sirf 1 null value allow karta hai ✅
+Search, Insert, Delete ki average time complexity O(1)
+
+
+Syntax
+----------
+HashSet<Integer> set = new HashSet<>();
+
+
+Important Methods
+----------------
+
+
+set.add(10);        // Element add
+set.remove(10);     // Element remove
+set.contains(10);   // Check present hai ya nahi
+set.size();         // Total elements
+set.isEmpty();      // Empty check
+set.clear();        // Sab delete
+
+=============
+Iteration
+--------------
+
+Iteration ka matlab collection ke elements ko ek-ek karke access karna.
+
+Iterato-->
+
+Iterator<Integer> it = set.iterator();
+
+
+hasNext()=>
+===============
+
+Check karta hai ki next element available hai ya nahi.
+Return type: boolean
+Agar next element hai → true
+Nahi hai → false
+while(it.hasNext()){
+
+
+next()=>
+===============
+Current element ko return karta hai.
+Iterator ko next element par move kar deta hai.
+System.out.println(it.next());
+
+
+Complete Example=>
+=======================
+Iterator<Integer> it = set.iterator();
+
+while(it.hasNext()){
+    System.out.println(it.next());
+}
+
+
+For-each Loop
+for(int x : set){
+    System.out.println(x);
+}
