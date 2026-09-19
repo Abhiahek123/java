@@ -28,19 +28,99 @@ public class implementation {
             tail = temp;
         }
 
+        void insertAthHead(int val) {
+            Node temp = new Node(val);
+            if(head==null) { // empty list
+                head= tail=temp;
+            }else { // non empty list
+                temp.next = head;
+                head = temp;
+            }
+        }
+
+
+        void insertAt(int idx , int val) {
+            Node t = new Node(val);
+            Node temp = head;
+
+            if(idx==size()) { // jb tail ke bad add karna ho node
+                insertAtEnd(val);
+                return;
+            } 
+            else if(idx==0) {//jb head ke phele add karna ho node
+                insertAthHead(val);
+                return ;
+            }
+            
+            else if(idx<0 || idx>size()){ 
+                System.out.println("Wrong index");
+                return;
+            }
+
+            for(int i=1; i<=idx-1; i++) {
+                temp = temp.next;
+            }
+            t.next = temp.next;
+            temp.next =t;
+        }
+
+
+        int getAt(int idx) {
+            Node temp = head;
+            for(int i=1; i<=idx; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+
+        void deleteAt(int idx) {
+            Node temp = head;
+            for(int i=1; i<=idx-1; i++) {
+                temp = temp.next;
+
+            }
+            temp.next = temp.next.next;
+            tail = temp;
+        
+        }
+
         void  display() {
             Node temp = head;
             while(temp!=null) {
                 System.out.print(temp.data+" ");
                 temp = temp.next;
             }
+            System.out.println();
+        }
+
+        int size() {
+            Node temp = head;
+            int count =0;
+            while(temp!=null) {
+                count++;
+                temp= temp.next;
+            }
+            return count;
         }
     }
     public static void main(String[] args) {
         linkedlist ll = new linkedlist();
         ll.insertAtEnd(4);
+        
         ll.insertAtEnd(5);
+        
+        ll.insertAtEnd(12);
+        
+        ll.insertAthHead(13);
+      
+        ll.insertAt(1,100);
         ll.display();
+    
+        // System.out.println(ll.getAt(1));
+        ll.deleteAt(2);
+        ll.display();
+        
+       
         
     }
     
